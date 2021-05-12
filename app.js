@@ -3,7 +3,7 @@ var bodyparser = require("body-parser");
 const https = require("https");
 var app = express();
 var today = Date();
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
